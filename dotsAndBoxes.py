@@ -1,1 +1,42 @@
+#Diego Aspinwall
+#12-14-17
+#dotsAndBoxes.py
 
+
+
+
+
+def buildBoard: #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
+def redrawAll: #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
+def drawLeftEdge: #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
+def drawRightEdge: #See drawLeftEdge
+def drawTopEdge: #See drawLeftEdge
+def drawBottomEdge: #See drawLeftEdge
+def drawCenter: #See drawLeftEdge. The function should color in the center and label it with a 1 or 2 based on who captured it.
+def drawScore: #Should take no arguments. The function print the current score as well as detect if the game is over.
+def updateLeftEdge: #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
+def updateRightEdge: #See updateLeftEdge
+def updateTopEdge: #See updateLeftEdge
+def updateBottomEdge: #See updateLeftEdge
+def mouseClick: #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
+
+if __name__ == '__main__': #This isn't really a function, but the rest of your code should be in this section. This section should set up the game.
+    
+
+
+
+'''
+Useful detail - You will probably want to look at the Matrix Demo to remind yourself how to create and work with a matrix.
+
+Detail #2: To delete all graphics, you can use a for loop.
+for item in App().spritelist[:]:
+    item.destroy()
+
+Detail #3: Each square should have a matrix associated with it [0,0,0,0,0] = [left, right, top, bottom, center]. When the user clicks a specific space, one of the zeros should change to a 1 or a 2 based on which player clicked.
+-------------------------------------------------------
+Ideas for extensions:
+1) Create some fun animation when someone wins
+2) Allow the players to choose the size of the board
+3) Allow the players to play multiple games and keep score for the series
+4) Create a player vs. computer version
+'''
