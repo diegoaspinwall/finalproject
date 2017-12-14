@@ -5,19 +5,11 @@
 
 
 def buildBoard: #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
-    for row in range(0,3):
-        for col in range(0,3):
-            print(board[row][col],' ',end = '')
-        print()
+    for row in range(0,4):
+        for col in range(0,4):
+            Sprite(backRectangle, (100*col +10, 100*row +10))
 
-board = [['a','b','c'],['d','e','f'],['g','h','i']]
-printBoard()
 
-row = int(input('Enter a row number: '))
-col = int(input('Enter a column number: '))
-
-board[row-1][col-1] = 'X'
-printBoard()
 def redrawAll: #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
 
 def drawLeftEdge: #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
