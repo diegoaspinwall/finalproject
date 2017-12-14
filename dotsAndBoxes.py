@@ -43,9 +43,9 @@ if __name__ == '__main__': #This isn't really a function, but the rest of your c
     
     blackOutline = LineStyle(1,black)
     
-    backRectangle = RectangleAsset(100,100,LineStyle(4,gray),white) 
-
-
+    backRectangle = RectangleAsset(100,100,LineStyle(4,gray),white)
+    
+    buildBoard()
 
 '''
 Useful detail - You will probably want to look at the Matrix Demo to remind yourself how to create and work with a matrix.
