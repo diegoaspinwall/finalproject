@@ -44,6 +44,14 @@ def mouseClick: #Should take one argument, event. The function should figure out
 
 if __name__ == '__main__': #This isn't really a function, but the rest of your code should be in this section. This section should set up the game.
     
+    blue = Color(0x0000FF,1)
+    red = Color(0xFF0000,1)
+    gray = Color(0x000000,.5)
+    white = Color(0xffffff,1)
+    
+    blackOutline = LineStyle(1,black)
+    
+    backRectangle = RectangleAsset(100,100,LineStyle(4,gray),white) 
 
 
 
