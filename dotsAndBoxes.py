@@ -5,11 +5,10 @@
 from ggame import *
 
 def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
-    matrix = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+    data['matrix'] = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
     for y in range(0,4):
         for x in range(0,4):
-            matrix[y][x] = [0,0,0,0,0]
-    print(matrix)
+            data['matrix'][y][x] = [0,0,0,0,0]
 
 
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
@@ -47,6 +46,9 @@ def mouseClick(): #Should take one argument, event. The function should figure o
 '''
 
 if __name__ == '__main__': #This isn't really a function, but the rest of your code should be in this section. This section should set up the game.
+    
+    data = {}
+    data['matrix'] = 0
     
     blue = Color(0x0000FF,1)
     red = Color(0xFF0000,1)
