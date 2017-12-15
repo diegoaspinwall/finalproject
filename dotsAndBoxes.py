@@ -2,14 +2,14 @@
 #12-14-17
 #dotsAndBoxes.py
 
-
+from ggame import *
 
 def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
     for row in range(0,4):
         for col in range(0,4):
             Sprite(backRectangle, (100*col +10, 100*row +10))
 
-
+'''
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
     
 def drawLeftEdge(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
@@ -34,7 +34,7 @@ def updateBottomEdge(): #See updateLeftEdge
     
 def mouseClick(): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
     
-
+'''
 
 if __name__ == '__main__': #This isn't really a function, but the rest of your code should be in this section. This section should set up the game.
     
