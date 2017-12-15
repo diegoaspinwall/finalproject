@@ -9,9 +9,13 @@ def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever 
         for col in range(0,4):
             Sprite(backRectangle, (110*col +10, 110*row +10))
 
-'''
+
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
-    
+    for row in range(0,4):
+        for col in range(0,4):
+            Sprite(backRectangle, (110*col +10, 110*row +10))
+
+'''
 def drawLeftEdge(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
     
 def drawRightEdge(): #See drawLeftEdge
@@ -47,6 +51,7 @@ if __name__ == '__main__': #This isn't really a function, but the rest of your c
     
     backRectangle = RectangleAsset(100,100,LineStyle(4,gray),white)
     
+    redrawAll()
     buildBoard()
     
     App().run()
