@@ -57,7 +57,7 @@ if __name__ == '__main__': #This isn't really a function, but the rest of your c
     blackOutline = LineStyle(1,gray)
     
     backRectangle = RectangleAsset(100,100,LineStyle(4,gray),white)
-    dot = RectangleAsset(10,10, LineStyle(4,black),black)
+    dot = RectangleAsset(10,10, LineStyle(0,black),black)
     
     redrawAll()
     buildBoard()
