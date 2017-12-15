@@ -43,7 +43,7 @@ if __name__ == '__main__': #This isn't really a function, but the rest of your c
     gray = Color(0x000000,.5)
     white = Color(0xffffff,1)
     
-    blackOutline = LineStyle(1,black)
+    blackOutline = LineStyle(1,gray)
     
     backRectangle = RectangleAsset(100,100,LineStyle(4,gray),white)
     
