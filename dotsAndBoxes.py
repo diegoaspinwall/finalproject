@@ -8,7 +8,7 @@ def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever 
     matrix = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
     for y in range(0,4):
         for x in range(0,4):
-            matrix[y][x] = 5
+            matrix[y][x] = [0,0,0,0,0]
     print(matrix)
 
 
