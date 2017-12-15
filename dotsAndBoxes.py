@@ -6,8 +6,8 @@ from ggame import *
 
 def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
     matrix = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
-    for y in matrix:
-        for x in matrix:
+    for y in range(0,4):
+        for x in range(0,4):
             matrix[y][x] = 5
     print(matrix)
 
