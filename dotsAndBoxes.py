@@ -7,7 +7,7 @@ from ggame import *
 def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
     for row in range(0,4):
         for col in range(0,4):
-            Sprite(backRectangle, (100*col +10, 100*row +10))
+            Sprite(backRectangle, (110*col +10, 110*row +10))
 
 '''
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
