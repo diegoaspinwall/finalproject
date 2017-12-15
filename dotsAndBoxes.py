@@ -9,6 +9,7 @@ def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever 
     for y in matrix:
         for x in matrix:
             matrix[y][x] = [5]
+    print(matrix)
 
 
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
