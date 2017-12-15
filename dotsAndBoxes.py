@@ -15,7 +15,7 @@ def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever 
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
     for rw in range(0,5):
         for cl in range(0,5):
-            Sprite(dot, (110*col, 110*row))
+            Sprite(dot, (110*cl, 110*rw))
     
     for row in range(0,4):
         for col in range(0,4):
