@@ -13,6 +13,10 @@ def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever 
 
 
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
+    for rw in range(0,5):
+        for cl in range(0,5):
+            Sprite
+    
     for row in range(0,4):
         for col in range(0,4):
             Sprite(backRectangle, (110*col +10, 110*row +10))
@@ -47,11 +51,13 @@ if __name__ == '__main__': #This isn't really a function, but the rest of your c
     blue = Color(0x0000FF,1)
     red = Color(0xFF0000,1)
     gray = Color(0x000000,.5)
+    black = Color(0x000000,1)
     white = Color(0xffffff,1)
     
     blackOutline = LineStyle(1,gray)
     
     backRectangle = RectangleAsset(100,100,LineStyle(4,gray),white)
+    dot = RectangleAsset(10,10, LineStyle(4,black),black)
     
     redrawAll()
     buildBoard()
