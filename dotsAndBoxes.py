@@ -10,7 +10,6 @@ def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever 
         for x in range(0,4):
             data['matrix'][y][x] = [0,0,0,0,0]
 
-
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
     for item in App().spritelist[:]:
         item.destroy()
