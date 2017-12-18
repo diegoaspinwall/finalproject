@@ -25,13 +25,13 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
             Sprite(backRectangle, (110*col +10, 110*row +10))
 
 '''
-def drawLeftEdge(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
+def drawLeftEdge(row,col,x,y): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
+    Sprite()
+def drawRightEdge(row,col,x,y): #See drawLeftEdge
     
-def drawRightEdge(): #See drawLeftEdge
+def drawTopEdge(row,col,x,y): #See drawLeftEdge
     
-def drawTopEdge(): #See drawLeftEdge
-    
-def drawBottomEdge(): #See drawLeftEdge
+def drawBottomEdge(row,col,x,y): #See drawLeftEdge
     
 def drawCenter(): #See drawLeftEdge. The function should color in the center and label it with a 1 or 2 based on who captured it.
     
@@ -62,7 +62,8 @@ if __name__ == '__main__': #This isn't really a function, but the rest of your c
     
     blackOutline = LineStyle(1,gray)
     
-    backRectangle = RectangleAsset(100,100,LineStyle(4,gray),white)
+    horRectangle = RectangleAsset(100,10,LineStyle(4,gray),white)
+    verRectangle = RectangleAsset(10,100,LineStyle(4,gray),white)
     dot = RectangleAsset(10,10, LineStyle(0,black),black)
     
     redrawAll()
