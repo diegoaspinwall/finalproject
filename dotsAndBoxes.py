@@ -20,13 +20,13 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
         for cl in range(0,5):
             Sprite(dot, (110*cl, 110*rw))
     
-    for row in range(0,5):
+    for row in range(0,4):
         for col in range(0,5):
             Sprite(verRectangle, (110*col, 110*row))
     
     for row in range(0,5):
-        for col in range(0,5):
-            Sprite(horRectangle, (110*col, 110*row))
+        for col in range(0,4):
+            Sprite(horRectangle, (110*col+10, 110*row))
 
 '''
 def drawLeftEdge(row,col,x,y): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
