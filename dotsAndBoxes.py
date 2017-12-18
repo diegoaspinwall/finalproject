@@ -49,9 +49,9 @@ def updateTopEdge(): #See updateLeftEdge
     
 def updateBottomEdge(): #See updateLeftEdge
     
-def mouseClick(): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
-    
 '''
+def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
+    print(event.x,event.y)
 
 if __name__ == '__main__': #This isn't really a function, but the rest of your code should be in this section. This section should set up the game.
     
