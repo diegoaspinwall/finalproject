@@ -9,7 +9,6 @@ def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever 
     for y in range(0,4):
         for x in range(0,4):
             data['matrix'][y][x] = [0,0,0,0,0]
-    print(data['matrix'])
 
 
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
@@ -73,7 +72,7 @@ if __name__ == '__main__': #This isn't really a function, but the rest of your c
     redrawAll()
     buildBoard()
     
-    App().run()
+    App().run(mouseClick)
 
 '''
 Useful detail - You will probably want to look at the Matrix Demo to remind yourself how to create and work with a matrix.
