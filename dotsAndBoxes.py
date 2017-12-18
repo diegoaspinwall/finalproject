@@ -54,10 +54,10 @@ def mouseClick(event): #Should take one argument, event. The function should fig
         print('Left')
     if 10<event.x<110 and 0<event.y<10:
         print('Top')
-    if 0<event.x<10 and 10<event.y<110:
-        print('Left')
-    if 0<event.x<10 and 10<event.y<110:
-        print('Left')
+    if 110<event.x<120 and 10<event.y<110:
+        print('Right')
+    if 10<event.x<110 and 110<event.y<120:
+        print('Bottom')
 
 if __name__ == '__main__':
     
