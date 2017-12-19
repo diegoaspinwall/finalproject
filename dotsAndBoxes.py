@@ -55,15 +55,14 @@ def mouseClick(event): #Should take one argument, event. The function should fig
         for b in range(0,4):
             if 110*a<event.x<110*a+10 and 10+110*b<event.y<110*(b+1):
                 print('Left')
-    '''
-    for row in range(0,4):
-        for col in range(0,5):
-            Sprite(verRectangle, (110*col, 110*row+10))
-    '''
+    
+    for a in range(1,5):
+        for b in range(0,4):
+            if 110*a<event.x<110*a+10 and 10+110*b<event.y<110*(b+1):
+                print('Right')
+    
     if 10<event.x<110 and 0<event.y<10:
         print('Top')
-    if 110<event.x<120 and 10<event.y<110:
-        print('Right')
     if 10<event.x<110 and 110<event.y<120:
         print('Bottom')
 
