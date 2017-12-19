@@ -53,7 +53,7 @@ def mouseClick(event): #Should take one argument, event. The function should fig
     
     for a in range(0,4):
         for b in range(0,5):
-            if 100*a<event.x<100*a+10 and 10<event.y<110:
+            if 100*a<event.x<100*a+10 and 10*b<event.y<110*b:
                 print('Left')
     
     if 10<event.x<110 and 0<event.y<10:
