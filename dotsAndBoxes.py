@@ -66,10 +66,12 @@ def mouseClick(event): #Should take one argument, event. The function should fig
             if 110*a<event.y<110*a+10 and 10+110*b<event.x<110*(b+1):
                 print('Top')
     
-    if 10<event.x<110 and 0<event.y<10:
-        print('Top')
-    if 10<event.x<110 and 110<event.y<120:
-        print('Bottom')
+    for a in range(1,5):
+        for b in range(0,4):
+            if 110*a<event.y<110*a+10 and 10+110*b<event.x<110*(b+1):
+                print('Top')
+    
+
 
 if __name__ == '__main__':
     
