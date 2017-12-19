@@ -89,6 +89,10 @@ if __name__ == '__main__':
     
     horRectangle = RectangleAsset(100,10,LineStyle(4,gray),white)
     verRectangle = RectangleAsset(10,100,LineStyle(4,gray),white)
+    rhorRectangle = RectangleAsset(100,10,LineStyle(4,black),red)
+    rverRectangle = RectangleAsset(10,100,LineStyle(4,black),red)
+    bhorRectangle = RectangleAsset(100,10,LineStyle(4,black),blue)
+    bverRectangle = RectangleAsset(10,100,LineStyle(4,black),blue)
     dot = RectangleAsset(10,10, LineStyle(0,black),black)
     
     redrawAll()
