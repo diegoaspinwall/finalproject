@@ -50,12 +50,12 @@ def updateBottomEdge(): #See updateLeftEdge
 '''
 def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
     print(event.x,event.y)
-    '''
-    for a in range(0,5):
+    
+    for a in range(0,4):
         for b in range(0,5):
-            if 0<event.x<10 and 10<event.y<110:
+            if 100*a<event.x<100*a+10 and 10<event.y<110:
                 print('Left')
-    '''
+    
     if 10<event.x<110 and 0<event.y<10:
         print('Top')
     if 110<event.x<120 and 10<event.y<110:
