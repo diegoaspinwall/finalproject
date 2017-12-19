@@ -77,6 +77,7 @@ if __name__ == '__main__':
     
     data = {}
     data['matrix'] = 0
+    data['player'] = 0
     
     blue = Color(0x0000FF,1)
     red = Color(0xFF0000,1)
