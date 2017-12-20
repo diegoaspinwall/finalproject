@@ -38,7 +38,12 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
 def drawLeftEdge(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
     for col in range(0,4):
         for row in range(0,4):
-            Sprite(verRectangle, (110*col, 110*row+10))
+            if data['matrix'][col][row]==1:
+                Sprite(rverRectangle, (110*col, 110*row+10))
+            elif data['matrix'][col][row]==2:
+                Sprite(bverRectangle, (110*col, 110*row+10))
+            else:
+                Sprite(verRectangle, (110*col, 110*row+10))
 
 def drawRightEdge(): #See drawLeftEdge
     for col in range(1,5):
