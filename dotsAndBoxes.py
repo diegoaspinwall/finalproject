@@ -107,6 +107,8 @@ def mouseClick(event): #Should take one argument, event. The function should fig
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 print('Bottom')
     
+    redrawAll()
+    
 
 
 if __name__ == '__main__':
