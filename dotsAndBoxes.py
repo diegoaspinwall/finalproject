@@ -2,6 +2,10 @@
 #12-14-17
 #dotsAndBoxes.py
 
+'''
+Check with Mr. Smed. Not following his exact directions. redrawAll not erasing and doing every click. Show.
+
+'''
 from ggame import *
 
 def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
