@@ -6,6 +6,7 @@ from ggame import *
 
 def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
     data['matrix'] = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+    #<>x, up down inside second set
     for y in range(0,4):
         for x in range(0,4):
             data['matrix'][y][x] = [0,0,0,0,0]
@@ -39,8 +40,15 @@ def drawCenter(): #See drawLeftEdge. The function should color in the center and
     
 def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
     
-def updateLeftEdge(): #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
-    
+'''
+def updateLeftEdge(row,col): #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
+    if data['matrix'][col][row][0] == 0:
+        if data['player'] == 1:
+            data['matrix'][col][row][0]=1
+        if data['player'] == 2:
+            data['matrix'][col][row][0]=2
+        data['player'] = (-1)*data['player']
+'''
 def updateRightEdge(): #See updateLeftEdge
     
 def updateTopEdge(): #See updateLeftEdge
@@ -77,7 +85,8 @@ if __name__ == '__main__':
     
     data = {}
     data['matrix'] = 0
-    data['player'] = 0
+    data['player'] = 1
+    #1 is red, -1 is blue
     
     blue = Color(0x0000FF,1)
     red = Color(0xFF0000,1)
