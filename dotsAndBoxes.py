@@ -32,7 +32,6 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
             Sprite(horRectangle, (110*col+10, 110*row))
     
 
-
 def drawLeftEdge(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
     for col in range(0,4):
         for row in range(0,4):
@@ -132,7 +131,9 @@ def mouseClick(event): #Should take one argument, event. The function should fig
     for row in range(0,5):
         for col in range(0,5):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
-                print('hi')
+                data['player']=(-1)*data['player']
+            if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
+                data['player']=(-1)*data['player']
     
 
 if __name__ == '__main__':
