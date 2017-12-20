@@ -129,18 +129,21 @@ def mouseClick(event): #Should take one argument, event. The function should fig
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 updateRightEdge(row,col-1)
+                drawRightEdge()
                 print('Right')
     
     for row in range(0,4):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateTopEdge(row,col)
+                drawTopEdge()
                 print('Top')
     
     for row in range(1,5):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateBottomEdge(row-1,col)
+                drawBottomEdge()
                 print('Bottom')
     
     for row in range(0,5):
