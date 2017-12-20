@@ -132,8 +132,8 @@ if __name__ == '__main__':
     bverRectangle = RectangleAsset(10,100,LineStyle(4,black),blue)
     dot = RectangleAsset(10,10, LineStyle(0,black),black)
     
-    redrawAll()
     buildBoard()
+    redrawAll()
     
     App().listenMouseEvent("click", mouseClick)
     App().run()
