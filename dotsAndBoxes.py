@@ -71,7 +71,7 @@ def updateLeftEdge(row,col): #Should take two arguments, the row and column numb
             data['matrix'][col][row][0]=1
         if data['player'] == -1:
             data['matrix'][col][row][0]=2
-        data['player'] = (-1)*data['player'] #IF SHARED, BEING SWITCHED TWICE: BAD. SOLUTION USE T/F!
+        data['player'] = (-1)*data['player'] #IF SHARED, BEING SWITCHED TWICE: BAD.
         print(data['matrix'])
 
 def updateRightEdge(row,col): #See updateLeftEdge
@@ -128,10 +128,12 @@ def mouseClick(event): #Should take one argument, event. The function should fig
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateBottomEdge(row-1,col)
                 print('Bottom')
-
-
     
-
+    for row in range(0,5):
+        for col in range(0,5):
+            if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
+                print('hi')
+    
 
 if __name__ == '__main__':
     
