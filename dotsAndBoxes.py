@@ -125,6 +125,7 @@ def mouseClick(event): #Should take one argument, event. The function should fig
                 updateBottomEdge(row-1,col)
                 print('Bottom')
 
+
     
 
 
