@@ -31,7 +31,7 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
     drawLeftEdge()
 
 
-def drawLeftEdge(row,col,x,y): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
+def drawLeftEdge(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
     for col in range(0,4):
         for row in range(0,4):
             Sprite(Sprite(verRectangle, (110*col, 110*row+10)))
