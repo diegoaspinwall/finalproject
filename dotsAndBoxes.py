@@ -36,13 +36,16 @@ def drawLeftEdge(): #Should take four (or six) arguments, the row and column num
         for row in range(0,4):
             Sprite(verRectangle, (110*col, 110*row+10))
 
+def drawRightEdge(): #See drawLeftEdge
+    for col in range(1,5):
+        for row in range(0,4):
+            Sprite(verRectangle, (110*col, 110*row+10))
+def drawTopEdge(): #See drawLeftEdge
+    
+def drawBottomEdge(): #See drawLeftEdge
+    
+
 '''
-def drawRightEdge(row,col,x,y): #See drawLeftEdge
-    
-def drawTopEdge(row,col,x,y): #See drawLeftEdge
-    
-def drawBottomEdge(row,col,x,y): #See drawLeftEdge
-    
 def drawCenter(): #See drawLeftEdge. The function should color in the center and label it with a 1 or 2 based on who captured it.
     
 def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
