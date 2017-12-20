@@ -18,7 +18,7 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
     for rw in range(0,5):
         for cl in range(0,5):
             Sprite(dot, (110*cl, 110*rw))
-    '''
+    
     for row in range(0,4):
         for col in range(0,5):
             Sprite(verRectangle, (110*col, 110*row+10))
@@ -26,12 +26,6 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
     for row in range(0,5):
         for col in range(0,4):
             Sprite(horRectangle, (110*col+10, 110*row))
-    '''
-    
-    drawLeftEdge()
-    drawRightEdge()
-    drawTopEdge()
-    drawBottomEdge()
     
 
 
@@ -90,6 +84,7 @@ def mouseClick(event): #Should take one argument, event. The function should fig
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 updateLeftEdge(row,col)
+                drawLeftEdge()
                 print('Left')
     
     for col in range(1,5):
@@ -106,8 +101,7 @@ def mouseClick(event): #Should take one argument, event. The function should fig
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 print('Bottom')
-    
-    redrawAll()
+
     
 
 
