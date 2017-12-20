@@ -41,7 +41,9 @@ def drawRightEdge(): #See drawLeftEdge
         for row in range(0,4):
             Sprite(verRectangle, (110*col, 110*row+10))
 def drawTopEdge(): #See drawLeftEdge
-    
+    for row in range(0,4):
+        for col in range(0,4):
+            Sprite(horRectangle, (110*col+10, 110*row))
 def drawBottomEdge(): #See drawLeftEdge
     
 
