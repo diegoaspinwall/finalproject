@@ -45,7 +45,7 @@ def updateLeftEdge(row,col): #Should take two arguments, the row and column numb
     if data['matrix'][col][row][0] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][0]=1
-        if data['player'] == 2:
+        if data['player'] == -1:
             data['matrix'][col][row][0]=2
         data['player'] = (-1)*data['player']
         print(data['matrix'])
