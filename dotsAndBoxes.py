@@ -69,14 +69,32 @@ def updateLeftEdge(row,col): #Should take two arguments, the row and column numb
             data['matrix'][col][row][0]=2
         data['player'] = (-1)*data['player']
         print(data['matrix'])
-'''
-def updateRightEdge(): #See updateLeftEdge
-    
-def updateTopEdge(): #See updateLeftEdge
-    
-def updateBottomEdge(): #See updateLeftEdge
-    
-'''
+
+def updateRightEdge(row,col): #See updateLeftEdge
+    if data['matrix'][col][row][1] == 0:
+        if data['player'] == 1:
+            data['matrix'][col][row][1]=1
+        if data['player'] == -1:
+            data['matrix'][col][row][1]=2
+        data['player'] = (-1)*data['player']
+        print(data['matrix'])
+def updateTopEdge(row,col): #See updateLeftEdge
+    if data['matrix'][col][row][2] == 0:
+        if data['player'] == 1:
+            data['matrix'][col][row][2]=1
+        if data['player'] == -1:
+            data['matrix'][col][row][2]=2
+        data['player'] = (-1)*data['player']
+        print(data['matrix'])
+def updateBottomEdge(row,col): #See updateLeftEdge
+    if data['matrix'][col][row][3] == 0:
+        if data['player'] == 1:
+            data['matrix'][col][row][3]=1
+        if data['player'] == -1:
+            data['matrix'][col][row][3]=2
+        data['player'] = (-1)*data['player']
+        print(data['matrix'])
+
 def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
     #print(event.x,event.y)
     
