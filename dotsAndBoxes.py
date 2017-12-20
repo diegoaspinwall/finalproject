@@ -78,6 +78,7 @@ def updateRightEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][1]=2
         data['player'] = (-1)*data['player']
         print(data['matrix'])
+
 def updateTopEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][2] == 0:
         if data['player'] == 1:
@@ -86,6 +87,7 @@ def updateTopEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][2]=2
         data['player'] = (-1)*data['player']
         print(data['matrix'])
+
 def updateBottomEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][3] == 0:
         if data['player'] == 1:
