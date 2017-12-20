@@ -45,17 +45,32 @@ def drawLeftEdge(): #Should take four (or six) arguments, the row and column num
 def drawRightEdge(): #See drawLeftEdge
     for col in range(1,5):
         for row in range(0,4):
-            Sprite(verRectangle, (110*col, 110*row+10))
+            if data['matrix'][col][row][1]==1:
+                Sprite(rverRectangle, (110*col, 110*row+10))
+            elif data['matrix'][col][row][1]==2:
+                Sprite(bverRectangle, (110*col, 110*row+10))
+            else:
+                Sprite(verRectangle, (110*col, 110*row+10))
 
 def drawTopEdge(): #See drawLeftEdge
     for row in range(0,4):
         for col in range(0,4):
-            Sprite(horRectangle, (110*col+10, 110*row))
+            if data['matrix'][col][row][2]==1:
+                Sprite(rhorRectangle, (110*col+10, 110*row))
+            elif data['matrix'][col][row][2]==2:
+                Sprite(bhorRectangle, (110*col+10, 110*row))
+            else:
+                Sprite(horRectangle, (110*col, 110*row+10))
 
 def drawBottomEdge(): #See drawLeftEdge
     for row in range(1,5):
         for col in range(0,4):
-            Sprite(horRectangle, (110*col+10, 110*row))
+            if data['matrix'][col][row][3]==1:
+                Sprite(rhorRectangle, (110*col+10, 110*row))
+            elif data['matrix'][col][row][3]==2:
+                Sprite(bhorRectangle, (110*col+10, 110*row))
+            else:
+                Sprite(horRectangle, (110*col, 110*row+10))
 
 
 '''
