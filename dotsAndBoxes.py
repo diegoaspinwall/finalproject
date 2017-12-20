@@ -67,7 +67,7 @@ def updateLeftEdge(row,col): #Should take two arguments, the row and column numb
             data['matrix'][col][row][0]=1
         if data['player'] == -1:
             data['matrix'][col][row][0]=2
-        data['player'] = (-1)*data['player']
+        data['player'] = (-1)*data['player'] #IF SHARED, BEING SWITCHED TWICE: BAD
         print(data['matrix'])
 
 def updateRightEdge(row,col): #See updateLeftEdge
