@@ -48,7 +48,6 @@ def drawLeftEdge(): #Should take four (or six) arguments, the row and column num
                 Sprite(verRectangle, (110*col, 110*row+10))
 
 def drawRightEdge(): #See drawLeftEdge
-    print(data['matrix'])
     for col in range(0,4):
         for row in range(0,4):
             if data['matrix'][col][row][1]==1:
