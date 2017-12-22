@@ -175,14 +175,6 @@ if __name__ == '__main__':
     App().run()
 
 '''
-Useful detail - You will probably want to look at the Matrix Demo to remind yourself how to create and work with a matrix.
-
-Detail #2: To delete all graphics, you can use a for loop.
-for item in App().spritelist[:]:
-    item.destroy()
-
-Detail #3: Each square should have a matrix associated with it [0,0,0,0,0] = [left, right, top, bottom, center]. When the user clicks a specific space, one of the zeros should change to a 1 or a 2 based on which player clicked.
--------------------------------------------------------
 Ideas for extensions:
 1) Create some fun animation when someone wins
 2) Allow the players to choose the size of the board
