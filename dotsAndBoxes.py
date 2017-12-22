@@ -82,7 +82,6 @@ def updateLeftEdge(row,col): #Should take two arguments, the row and column numb
             data['matrix'][col][row][0]=1
         if data['player'] == -1:
             data['matrix'][col][row][0]=2
-        print(data['matrix'])
 
 def updateRightEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][1] == 0:
@@ -90,7 +89,6 @@ def updateRightEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][1]=1
         if data['player'] == -1:
             data['matrix'][col][row][1]=2
-        print(data['matrix'])
 
 def updateTopEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][2] == 0:
@@ -98,7 +96,6 @@ def updateTopEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][2]=1
         if data['player'] == -1:
             data['matrix'][col][row][2]=2
-        print(data['matrix'])
 
 def updateBottomEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][3] == 0:
@@ -106,7 +103,6 @@ def updateBottomEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][3]=1
         if data['player'] == -1:
             data['matrix'][col][row][3]=2
-        print(data['matrix'])
 
 def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
     #print(event.x,event.y)
@@ -116,28 +112,24 @@ def mouseClick(event): #Should take one argument, event. The function should fig
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 updateLeftEdge(row,col)
                 redrawAll()
-                #drawRightEdge()
     
     for col in range(1,5):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 updateRightEdge(row,col-1)
                 redrawAll()
-                #drawRightEdge()
     
     for row in range(0,4):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateTopEdge(row,col)
                 redrawAll()
-                #drawTopEdge()
     
     for row in range(1,5):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateBottomEdge(row-1,col)
                 redrawAll()
-                #drawBottomEdge()
     
     for row in range(0,5):
         for col in range(0,5):
@@ -145,7 +137,7 @@ def mouseClick(event): #Should take one argument, event. The function should fig
                 data['player']=(-1)*data['player']
             if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
                 data['player']=(-1)*data['player']
-            #MAKE IT SO THAT IT DOESN'T ACCEPT ALREADY HIT BOXES
+            #MAKE IT SO THAT IT DOESN'T ACCEPT ALREADY HIT BOXES?
     
 
 if __name__ == '__main__':
