@@ -65,7 +65,7 @@ def drawTopEdge(): #See drawLeftEdge
             elif data['matrix'][col][row][2]==2:
                 Sprite(bhorRectangle, (110*col+10, 110*row))
             else:
-                Sprite(horRectangle, (110*col, 110*row+10))
+                Sprite(horRectangle, (110*col+10, 110*row))
 
 def drawBottomEdge(): #See drawLeftEdge
     for row in range(0,4):
@@ -75,7 +75,7 @@ def drawBottomEdge(): #See drawLeftEdge
             elif data['matrix'][col][row][3]==2:
                 Sprite(bhorRectangle, (110*col+10, 110*(row+1)))
             else:
-                Sprite(horRectangle, (110*col, 110*(row+1)+10))
+                Sprite(horRectangle, (110*col+10, 110*(row+1)))
 
 
 '''
