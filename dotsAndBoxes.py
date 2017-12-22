@@ -22,15 +22,7 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
     for rw in range(0,5):
         for cl in range(0,5):
             Sprite(dot, (110*cl, 110*rw))
-    '''
-    for row in range(0,4):
-        for col in range(0,5):
-            Sprite(verRectangle, (110*col, 110*row+10))
     
-    for row in range(0,5):
-        for col in range(0,4):
-            Sprite(horRectangle, (110*col+10, 110*row))
-    '''
     drawLeftEdge()
     drawRightEdge()
     drawTopEdge()
@@ -98,7 +90,6 @@ def updateRightEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][1]=1
         if data['player'] == -1:
             data['matrix'][col][row][1]=2
-        #data['player'] = (-1)*data['player']
         print(data['matrix'])
 
 def updateTopEdge(row,col): #See updateLeftEdge
@@ -107,7 +98,6 @@ def updateTopEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][2]=1
         if data['player'] == -1:
             data['matrix'][col][row][2]=2
-        #data['player'] = (-1)*data['player']
         print(data['matrix'])
 
 def updateBottomEdge(row,col): #See updateLeftEdge
@@ -116,7 +106,6 @@ def updateBottomEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][3]=1
         if data['player'] == -1:
             data['matrix'][col][row][3]=2
-        #data['player'] = (-1)*data['player']
         print(data['matrix'])
 
 def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
