@@ -3,7 +3,7 @@
 #dotsAndBoxes.py
 
 '''
-Check with Mr. Smed. Not following his exact directions. redrawAll not erasing and doing every click. Show.
+Check with Mr. Smed. Not following his exact directions.
 
 '''
 from ggame import *
