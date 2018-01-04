@@ -165,8 +165,15 @@ def mouseClick(event): #Should take one argument, event. The function should fig
 '''
 data['score1'] += 1
 data['scoreTextRed'].destroy()
-scoreBoxRed = TextAsset(str(data['score1']),fill=red, style='bold 30pt Times')
-data['scoreTextRed'] = Sprite(scoreBox)
+scoreRed = TextAsset(str(data['score1']),fill=red, style='bold 30pt Times')
+data['scoreTextRed'] = Sprite(scoreRed)
+'''
+
+'''
+data['score2'] += 1
+data['scoreTextBlue'].destroy()
+scoreBlue = TextAsset(str(data['score1']),fill=red, style='bold 30pt Times')
+data['scoreTextRed'] = Sprite(scoreBlue)
 '''
 
 if __name__ == '__main__':
