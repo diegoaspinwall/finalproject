@@ -137,7 +137,7 @@ def mouseClick(event): #Should take one argument, event. The function should fig
                 data['player']=(-1)*data['player']
             if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
                 data['player']=(-1)*data['player']
-            #MAKE IT SO THAT IT DOESN'T ACCEPT ALREADY HIT BOXES?
+            #MAKE IT SO THAT IT DOESN'T ACCEPT ALREADY HIT BOXES
     
 
 if __name__ == '__main__':
