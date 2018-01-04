@@ -185,8 +185,10 @@ if __name__ == '__main__':
     bhorRectangle = RectangleAsset(100,10,LineStyle(4,black),blue)
     bverRectangle = RectangleAsset(10,100,LineStyle(4,black),blue)
     dot = RectangleAsset(10,10, LineStyle(0,black),black)
-    one = TextAsset('1',fill=black,style='bold 40pt Times') 
-    two = TextAsset('2',fill=black,style='bold 40pt Times') 
+    one = TextAsset('1',fill=black,style='bold 40pt Times')
+    two = TextAsset('2',fill=black,style='bold 40pt Times')
+    redSq = RectangleAsset(100,100, LineStyle(0,black),red)
+    blueSq = RectangleAsset(100,100, LineStyle(0,black),blue)
     
     buildBoard()
     redrawAll()
