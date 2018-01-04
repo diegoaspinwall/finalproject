@@ -4,8 +4,8 @@
 
 '''
 Check with Mr. Smed. Not following his exact directions.
-
 '''
+
 from ggame import *
 
 def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
@@ -23,13 +23,13 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
         for cl in range(0,5):
             Sprite(dot, (110*cl, 110*rw))
     
-    drawLeftEdge()
-    drawRightEdge()
-    drawTopEdge()
-    drawBottomEdge()
+    drawLeftEdges()
+    drawRightEdges()
+    drawTopEdges()
+    drawBottomEdges()
     
 
-def drawLeftEdge(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
+def drawLeftEdges(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
     for col in range(0,4):
         for row in range(0,4):
             if data['matrix'][col][row][0]==1:
@@ -39,7 +39,7 @@ def drawLeftEdge(): #Should take four (or six) arguments, the row and column num
             else:
                 Sprite(verRectangle, (110*col, 110*row+10))
 
-def drawRightEdge(): #See drawLeftEdge
+def drawRightEdges(): #See drawLeftEdge
     for col in range(0,4):
         for row in range(0,4):
             if data['matrix'][col][row][1]==1:
@@ -49,7 +49,7 @@ def drawRightEdge(): #See drawLeftEdge
             else:
                 Sprite(verRectangle, (110*(col+1), 110*row+10))
 
-def drawTopEdge(): #See drawLeftEdge
+def drawTopEdges(): #See drawLeftEdge
     for row in range(0,4):
         for col in range(0,4):
             if data['matrix'][col][row][2]==1:
@@ -59,7 +59,7 @@ def drawTopEdge(): #See drawLeftEdge
             else:
                 Sprite(horRectangle, (110*col+10, 110*row))
 
-def drawBottomEdge(): #See drawLeftEdge
+def drawBottomEdges(): #See drawLeftEdge
     for row in range(0,4):
         for col in range(0,4):
             if data['matrix'][col][row][3]==1:
