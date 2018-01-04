@@ -76,9 +76,10 @@ def drawCenters(): #See drawLeftEdge. The function should color in the center an
         for col in range(0,4):
             if data['matrix'][col][row][4]==1:
                 Sprite(one, (110*col+10, 110*row))
+                #DO COLOR
             if data['matrix'][col][row][4]==2:
                 Sprite(two, (110*col+10, 110*row+10))
-            
+                #DO COLOR
 
 '''
 def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
