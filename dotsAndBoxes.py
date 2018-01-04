@@ -70,12 +70,11 @@ def drawBottomEdges(): #See drawLeftEdge
                 Sprite(horRectangle, (110*col+10, 110*(row+1)))
 
 
-'''
 def drawCenter(): #See drawLeftEdge. The function should color in the center and label it with a 1 or 2 based on who captured it.
     
 def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
     
-'''
+
 def updateLeftEdge(row,col): #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
     if data['matrix'][col][row][0] == 0:
         if data['player'] == 1:
@@ -121,9 +120,6 @@ def mouseClick(event): #Should take one argument, event. The function should fig
             The problems are:
             -The data['matrix'] isn't the same row and col range because the row and columns don't think around boxes
             -I included the second part of the 'or' to catch the outer layer of the squares
-            
-            Mr. Smedinghoff - I feel like I am not thinking through this the right way and making it complicated
-            Do you have any guidance?
             '''
             if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
                 if data['matrix'][row][col][0] == 0 or data['matrix'][3][col][1] == 0:
@@ -135,24 +131,28 @@ def mouseClick(event): #Should take one argument, event. The function should fig
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 updateLeftEdge(row,col)
+                drawCenter()
                 redrawAll()
     
     for col in range(1,5):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 updateRightEdge(row,col-1)
+                drawCenter()
                 redrawAll()
     
     for row in range(0,4):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateTopEdge(row,col)
+                drawCenter()
                 redrawAll()
     
     for row in range(1,5):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateBottomEdge(row-1,col)
+                drawCenter()
                 redrawAll()
     
 
