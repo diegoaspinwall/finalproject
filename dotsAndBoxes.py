@@ -111,8 +111,12 @@ def updateBottomEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][3] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][3]=1
+            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
+                data['matrix'][col][row][4] = 1
         if data['player'] == -1:
             data['matrix'][col][row][3]=2
+            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
+                data['matrix'][col][row][4] = 2
 
 def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
     #print(event.x,event.y)
