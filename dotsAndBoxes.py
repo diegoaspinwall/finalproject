@@ -74,7 +74,7 @@ def drawBottomEdges(): #See drawLeftEdge
 def drawCenters(): #See drawLeftEdge. The function should color in the center and label it with a 1 or 2 based on who captured it.
     for row in range(0,4):
         for col in range(0,4):
-            if data['matrix'][col][row][4]!=1:
+            if data['matrix'][col][row][4]!=0:
                 
             
 
