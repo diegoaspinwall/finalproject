@@ -1,10 +1,6 @@
 #Diego Aspinwall
 #12-14-17
-#dotsAndBoxes.py
-
-'''
-Check with Mr. Smed. Not following his exact directions.
-'''
+#dotsAndBoxes.py - 
 
 from ggame import *
 
