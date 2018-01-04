@@ -172,7 +172,7 @@ data['scoreTextRed'] = Sprite(scoreRed)
 '''
 data['score2'] += 1
 data['scoreTextBlue'].destroy()
-scoreBlue = TextAsset(str(data['score1']),fill=red, style='bold 30pt Times')
+scoreBlue = TextAsset(str(data['score2']),fill=red, style='bold 30pt Times')
 data['scoreTextRed'] = Sprite(scoreBlue)
 '''
 
