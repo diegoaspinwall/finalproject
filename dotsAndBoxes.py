@@ -112,6 +112,14 @@ def mouseClick(event): #Should take one argument, event. The function should fig
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 if data['matrix'][col][row][2] == 0 or data['matrix'][col][3][3] == 0:
                     data['player']=(-1)*data['player']
+            '''
+            I used the col and row 0-4 to detect a mouseclick in the area where you're supposed to click
+            The second if statement is supposed to go through each entry in the matrix and see if it has been
+               clicked before
+            Then it will change the player
+            The problems are:
+            -
+            '''
             if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
                 if data['matrix'][row][col][0] == 0 or data['matrix'][3][col][1] == 0:
                     data['player']=(-1)*data['player']
