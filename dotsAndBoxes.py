@@ -118,7 +118,11 @@ def mouseClick(event): #Should take one argument, event. The function should fig
                clicked before
             Then it will change the player
             The problems are:
-            -
+            -The data['matrix'] isn't the same row and col range because the row and columns don't think around boxes
+            -I included the second part of the 'or' to catch the outer layer of the squares
+            
+            Mr. Smedinghoff - I feel like I am not thinking through this the right way and making it complicated
+            Do you have any guidance?
             '''
             if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
                 if data['matrix'][row][col][0] == 0 or data['matrix'][3][col][1] == 0:
