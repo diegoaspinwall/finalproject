@@ -134,9 +134,11 @@ def mouseClick(event): #Should take one argument, event. The function should fig
     for row in range(0,5):
         for col in range(0,5):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
-                data['player']=(-1)*data['player']
+                if data['matrix'][col][row] == 0:
+                    data['player']=(-1)*data['player']
             if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
-                data['player']=(-1)*data['player']
+                if data['matrix'][row][col] == 0:
+                    data['player']=(-1)*data['player']
             #MAKE IT SO THAT IT DOESN'T ACCEPT ALREADY HIT BOXES
     
 
