@@ -1,6 +1,6 @@
 #Diego Aspinwall
 #12-14-17
-#dotsAndBoxes.py - 
+#dotsAndBoxes.py - the third best game ever
 
 from ggame import *
 
