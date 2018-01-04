@@ -131,26 +131,18 @@ def updateBottomEdge(row,col): #See updateLeftEdge
                 data['matrix'][col][row][4] = 2
 
 def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
-    #print(event.x,event.y)
-    
     for row in range(0,5):
         for col in range(0,5):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 #if data['matrix'][col][row][2] == 0 or data['matrix'][col][3][3] == 0:
                 data['player']=(-1)*data['player']
             '''
-            I used the col and row 0-4 to detect a mouseclick in the area where you're supposed to click
-            The second if statement is supposed to go through each entry in the matrix and see if it has been
-               clicked before
-            Then it will change the player
-            The problems are:
             -The data['matrix'] isn't the same row and col range because the row and columns don't think around boxes
             -I included the second part of the 'or' to catch the outer layer of the squares
             '''
             if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
                 #if data['matrix'][row][col][0] == 0 or data['matrix'][3][col][1] == 0:
                 data['player']=(-1)*data['player']
-            #MAKE IT SO THAT IT DOESN'T ACCEPT ALREADY HIT BOXES
     
     for col in range(0,4):
         for row in range(0,4):
