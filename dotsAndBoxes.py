@@ -27,6 +27,7 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
     drawRightEdges()
     drawTopEdges()
     drawBottomEdges()
+    drawCenters()
     
 
 def drawLeftEdges(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
@@ -70,8 +71,12 @@ def drawBottomEdges(): #See drawLeftEdge
                 Sprite(horRectangle, (110*col+10, 110*(row+1)))
 
 
-def drawCenter(): #See drawLeftEdge. The function should color in the center and label it with a 1 or 2 based on who captured it.
-    print('hi')
+def drawCenters(): #See drawLeftEdge. The function should color in the center and label it with a 1 or 2 based on who captured it.
+    for row in range(0,4):
+        for col in range(0,4):
+            if data['matrix'][col][row][4]!=1:
+                
+            
 
 '''
 def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
@@ -134,28 +139,24 @@ def mouseClick(event): #Should take one argument, event. The function should fig
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 updateLeftEdge(row,col)
-                drawCenter()
                 redrawAll()
     
     for col in range(1,5):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 updateRightEdge(row,col-1)
-                drawCenter()
                 redrawAll()
     
     for row in range(0,4):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateTopEdge(row,col)
-                drawCenter()
                 redrawAll()
     
     for row in range(1,5):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateBottomEdge(row-1,col)
-                drawCenter()
                 redrawAll()
     
 
@@ -181,6 +182,8 @@ if __name__ == '__main__':
     bhorRectangle = RectangleAsset(100,10,LineStyle(4,black),blue)
     bverRectangle = RectangleAsset(10,100,LineStyle(4,black),blue)
     dot = RectangleAsset(10,10, LineStyle(0,black),black)
+    one = TextAsset('1',fill=black,style='bold 40pt Times') 
+    two = TextAsset('2',fill=black,style='bold 40pt Times') 
     
     buildBoard()
     redrawAll()
