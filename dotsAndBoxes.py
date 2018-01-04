@@ -169,6 +169,8 @@ if __name__ == '__main__':
     data['matrix'] = 0
     data['player'] = -1
     #1 is red or player 1, -1 is blue or player 2
+    data['score1'] = 0
+    data['score2'] = 0
     
     blue = Color(0x0000FF,1)
     red = Color(0xFF0000,1)
@@ -189,9 +191,12 @@ if __name__ == '__main__':
     two = TextAsset('2',fill=black,style='bold 40pt Times')
     redSq = RectangleAsset(100,100, LineStyle(0,black),red)
     blueSq = RectangleAsset(100,100, LineStyle(0,black),blue)
+    scoreBox = TextAsset('0 | 0', fill=scorecolor, style='bold 30pt Times')
     
     buildBoard()
     redrawAll()
+    
+    data['scoreText'] = Sprite(scoreBox)
     
     App().listenMouseEvent("click", mouseClick)
     App().run()
