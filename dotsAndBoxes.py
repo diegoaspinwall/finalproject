@@ -90,22 +90,34 @@ def updateLeftEdge(row,col): #Should take two arguments, the row and column numb
     if data['matrix'][col][row][0] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][0]=1
+            if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
+                data['matrix'][col][row][4] = 1
         if data['player'] == -1:
             data['matrix'][col][row][0]=2
+            if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
+                data['matrix'][col][row][4] = 2
 
 def updateRightEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][1] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][1]=1
+            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
+                data['matrix'][col][row][4] = 1
         if data['player'] == -1:
             data['matrix'][col][row][1]=2
+            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
+                data['matrix'][col][row][4] = 2
 
 def updateTopEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][2] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][2]=1
+            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
+                data['matrix'][col][row][4] = 1
         if data['player'] == -1:
             data['matrix'][col][row][2]=2
+            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
+                data['matrix'][col][row][4] = 2
 
 def updateBottomEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][3] == 0:
