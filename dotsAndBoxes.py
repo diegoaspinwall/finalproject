@@ -166,13 +166,7 @@ def mouseClick(event): #Should take one argument, event. The function should fig
 data['score1'] += 1
 data['scoreTextRed'].destroy()
 scoreBoxRed = TextAsset(str(data['score1']),fill=red, style='bold 30pt Times')
-data['scoreText'] = Sprite(scoreBox)
-if data['score1']==10:
-    print('Player 1 wins')
-    data['directionx'] = 0
-    data['directiony'] = 0
-    circle.x = X_LENGTH/2
-    circle.y = Y_LENGTH/2
+data['scoreTextRed'] = Sprite(scoreBox)
 '''
 
 if __name__ == '__main__':
