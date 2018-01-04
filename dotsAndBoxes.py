@@ -209,11 +209,3 @@ if __name__ == '__main__':
     
     App().listenMouseEvent("click", mouseClick)
     App().run()
-
-'''
-Ideas for extensions:
-1) Create some fun animation when someone wins
-2) Allow the players to choose the size of the board
-3) Allow the players to play multiple games and keep score for the series
-4) Create a player vs. computer version
-'''
