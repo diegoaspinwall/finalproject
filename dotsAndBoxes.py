@@ -107,6 +107,16 @@ def updateBottomEdge(row,col): #See updateLeftEdge
 def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
     #print(event.x,event.y)
     
+    for row in range(0,5):
+        for col in range(0,5):
+            if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
+                if data['matrix'][col][row] == 0:
+                    data['player']=(-1)*data['player']
+            if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
+                if data['matrix'][row][col] == 0:
+                    data['player']=(-1)*data['player']
+            #MAKE IT SO THAT IT DOESN'T ACCEPT ALREADY HIT BOXES
+    
     for col in range(0,4):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
@@ -130,16 +140,6 @@ def mouseClick(event): #Should take one argument, event. The function should fig
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 updateBottomEdge(row-1,col)
                 redrawAll()
-    
-    for row in range(0,5):
-        for col in range(0,5):
-            if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
-                if data['matrix'][col][row] == 0:
-                    data['player']=(-1)*data['player']
-            if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
-                if data['matrix'][row][col] == 0:
-                    data['player']=(-1)*data['player']
-            #MAKE IT SO THAT IT DOESN'T ACCEPT ALREADY HIT BOXES
     
 
 if __name__ == '__main__':
