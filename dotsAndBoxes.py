@@ -1,6 +1,6 @@
 #Diego Aspinwall
 #12-14-17
-#dotsAndBoxes.py - the third best game ever
+#dotsAndBoxes.py - tied for second
 
 from ggame import *
 
@@ -218,10 +218,8 @@ if __name__ == '__main__':
     buildBoard()
     redrawAll()
     
-    #data['scoreTextRed'] = Sprite(scoreRed)
-    #data['scoreTextBlue'] = Sprite(scoreBlue,(50,0))
-    Sprite(scoreRed)
-    Sprite(scoreBlue,(50,0))
+    data['scoreTextRed'] = Sprite(scoreRed)
+    data['scoreTextBlue'] = Sprite(scoreBlue,(50,0))
     
     App().listenMouseEvent("click", mouseClick)
     App().run()
