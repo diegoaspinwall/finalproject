@@ -81,9 +81,8 @@ def drawCenters(): #See drawLeftEdge. The function should color in the center an
 def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
     Sprite(TextAsset(data['score1'], fill=red, style='bold 30pt Times'))
     Sprite(TextAsset(data['score2'], fill=blue, style='bold 30pt Times'),(50,0))
-    for a in data['matrix']:
-        for b in data['matrix']:
-            
+    if data['score1'] + data['score2'] == 16:
+        print('Game Over')
 
 def updateLeftEdge(row,col): #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
     if data['matrix'][col][row][0] == 0:
