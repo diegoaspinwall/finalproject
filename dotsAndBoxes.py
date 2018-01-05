@@ -203,6 +203,8 @@ if __name__ == '__main__':
     
     blue = Color(0x0000FF,1)
     red = Color(0xFF0000,1)
+    bluel = Color(0x0000FF,.5)
+    redl = Color(0xFF0000,.5)
     gray = Color(0x000000,.2)
     black = Color(0x000000,1)
     white = Color(0xffffff,1)
