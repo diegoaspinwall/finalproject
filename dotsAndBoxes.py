@@ -24,6 +24,7 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
     drawTopEdges()
     drawBottomEdges()
     drawCenters()
+    drawScore()
     
 
 def drawLeftEdges(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
@@ -90,13 +91,11 @@ def updateLeftEdge(row,col): #Should take two arguments, the row and column numb
             if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 1
                 data['score1'] += 1
-                drawScore()
         if data['player'] == -1:
             data['matrix'][col][row][0]=2
             if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 2
                 data['score2'] += 1
-                drawScore()
 
 def updateRightEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][1] == 0:
@@ -105,13 +104,11 @@ def updateRightEdge(row,col): #See updateLeftEdge
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 1
                 data['score1'] += 1
-                drawScore()
         if data['player'] == -1:
             data['matrix'][col][row][1]=2
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 2
                 data['score2'] += 1
-                drawScore()
 
 def updateTopEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][2] == 0:
@@ -120,13 +117,11 @@ def updateTopEdge(row,col): #See updateLeftEdge
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 1
                 data['score1'] += 1
-                drawScore()
         if data['player'] == -1:
             data['matrix'][col][row][2]=2
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 2
                 data['score2'] += 1
-                drawScore()
 
 def updateBottomEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][3] == 0:
@@ -135,13 +130,11 @@ def updateBottomEdge(row,col): #See updateLeftEdge
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
                 data['matrix'][col][row][4] = 1
                 data['score1'] += 1
-                drawScore()
         if data['player'] == -1:
             data['matrix'][col][row][3]=2
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
                 data['matrix'][col][row][4] = 2
                 data['score2'] += 1
-                drawScore()
 
 def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
     for row in range(0,5):
