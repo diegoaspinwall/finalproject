@@ -78,7 +78,7 @@ def drawCenters(): #See drawLeftEdge. The function should color in the center an
                 Sprite(two, (110*col+50, 110*row+25))
 
 def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
-    print('hi')
+    print('Coolcat')
 
 def updateLeftEdge(row,col): #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
     if data['matrix'][col][row][0] == 0:
@@ -86,10 +86,12 @@ def updateLeftEdge(row,col): #Should take two arguments, the row and column numb
             data['matrix'][col][row][0]=1
             if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 1
+                data['score1'] += 1
         if data['player'] == -1:
             data['matrix'][col][row][0]=2
             if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 2
+                data['score2'] += 1
 
 def updateRightEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][1] == 0:
@@ -97,10 +99,12 @@ def updateRightEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][1]=1
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 1
+                data['score1'] += 1
         if data['player'] == -1:
             data['matrix'][col][row][1]=2
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 2
+                data['score2'] += 1
 
 def updateTopEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][2] == 0:
@@ -108,10 +112,12 @@ def updateTopEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][2]=1
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 1
+                data['score1'] += 1
         if data['player'] == -1:
             data['matrix'][col][row][2]=2
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
                 data['matrix'][col][row][4] = 2
+                data['score2'] += 1
 
 def updateBottomEdge(row,col): #See updateLeftEdge
     if data['matrix'][col][row][3] == 0:
@@ -119,14 +125,12 @@ def updateBottomEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][3]=1
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
                 data['matrix'][col][row][4] = 1
-                '''data['score1'] += 1
-                data['scoreTextRed'].destroy()
-                scoreRed = TextAsset(str(data['score1']),fill=red, style='bold 30pt Times')
-                data['scoreTextRed'] = Sprite(scoreRed)'''
+                data['score1'] += 1
         if data['player'] == -1:
             data['matrix'][col][row][3]=2
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
                 data['matrix'][col][row][4] = 2
+                data['score2'] += 1
 
 def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
     for row in range(0,5):
