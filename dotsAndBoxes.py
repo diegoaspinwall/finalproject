@@ -204,7 +204,7 @@ if __name__ == '__main__':
     two = TextAsset('2',fill=black,style='bold 40pt Times')
     redSq = RectangleAsset(100,100, LineStyle(0,black),redl)
     blueSq = RectangleAsset(100,100, LineStyle(0,black),bluel)
-    over = TextAsset('Game Over',fill=black,style='bold 50pt Times')
+    over = TextAsset('Game Over',fill=white,style='bold 50pt Times')
     
     buildBoard()
     redrawAll()
