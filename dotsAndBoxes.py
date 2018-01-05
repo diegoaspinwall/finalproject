@@ -6,7 +6,7 @@ from ggame import *
 
 def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
     data['matrix'] = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
-    #<>x, up down inside second set
+    #<>x, up and down inside second set
     for y in range(0,4):
         for x in range(0,4):
             data['matrix'][y][x] = [0,0,0,0,0]
@@ -76,10 +76,10 @@ def drawCenters(): #See drawLeftEdge. The function should color in the center an
             if data['matrix'][col][row][4]==2:
                 Sprite(blueSq, (110*col+10, 110*row+10))
                 Sprite(two, (110*col+50, 110*row+25))
-'''
+
 def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
-    
-'''
+    print('hi')
+
 def updateLeftEdge(row,col): #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
     if data['matrix'][col][row][0] == 0:
         if data['player'] == 1:
@@ -218,4 +218,4 @@ if __name__ == '__main__':
     data['scoreTextBlue'] = Sprite(scoreBlue,(50,0))
     
     App().listenMouseEvent("click", mouseClick)
-    App().run()
+    App().run(drawScore)
