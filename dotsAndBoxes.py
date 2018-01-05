@@ -213,7 +213,7 @@ if __name__ == '__main__':
     redSq = RectangleAsset(100,100, LineStyle(0,black),red)
     blueSq = RectangleAsset(100,100, LineStyle(0,black),blue)
     scoreRed = TextAsset(data['score1'], fill=red, style='bold 30pt Times')
-    scoreBlue = TextAsset('0', fill=blue, style='bold 30pt Times')
+    scoreBlue = TextAsset(data['score2'], fill=blue, style='bold 30pt Times')
     
     buildBoard()
     redrawAll()
