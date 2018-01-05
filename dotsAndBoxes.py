@@ -212,7 +212,7 @@ if __name__ == '__main__':
     two = TextAsset('2',fill=black,style='bold 40pt Times')
     redSq = RectangleAsset(100,100, LineStyle(0,black),red)
     blueSq = RectangleAsset(100,100, LineStyle(0,black),blue)
-    scoreRed = TextAsset('0', fill=red, style='bold 30pt Times')
+    scoreRed = TextAsset(data['score1'], fill=red, style='bold 30pt Times')
     scoreBlue = TextAsset('0', fill=blue, style='bold 30pt Times')
     
     buildBoard()
@@ -222,4 +222,4 @@ if __name__ == '__main__':
     data['scoreTextBlue'] = Sprite(scoreBlue,(50,0))
     
     App().listenMouseEvent("click", mouseClick)
-    App().run(drawScore)
+    App().run()
