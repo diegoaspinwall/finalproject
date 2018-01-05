@@ -218,8 +218,10 @@ if __name__ == '__main__':
     buildBoard()
     redrawAll()
     
-    data['scoreTextRed'] = Sprite(scoreRed)
-    data['scoreTextBlue'] = Sprite(scoreBlue,(50,0))
+    #data['scoreTextRed'] = Sprite(scoreRed)
+    #data['scoreTextBlue'] = Sprite(scoreBlue,(50,0))
+    Sprite(scoreRed)
+    Sprite(scoreBlue,(50,0))
     
     App().listenMouseEvent("click", mouseClick)
     App().run()
