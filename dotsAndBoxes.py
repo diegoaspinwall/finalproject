@@ -173,19 +173,6 @@ def mouseClick(event): #Should take one argument, event. The function should fig
                 updateBottomEdge(row-1,col)
                 redrawAll()
 
-'''
-data['score1'] += 1
-data['scoreTextRed'].destroy()
-scoreRed = TextAsset(str(data['score1']),fill=red, style='bold 30pt Times')
-data['scoreTextRed'] = Sprite(scoreRed)
-'''
-
-'''
-data['score2'] += 1
-data['scoreTextBlue'].destroy()
-scoreBlue = TextAsset(str(data['score2']),fill=red, style='bold 30pt Times')
-data['scoreTextRed'] = Sprite(scoreBlue)
-'''
 
 if __name__ == '__main__':
     
@@ -217,14 +204,9 @@ if __name__ == '__main__':
     two = TextAsset('2',fill=black,style='bold 40pt Times')
     redSq = RectangleAsset(100,100, LineStyle(0,black),redl)
     blueSq = RectangleAsset(100,100, LineStyle(0,black),bluel)
-    scoreRed = TextAsset(data['score1'], fill=red, style='bold 30pt Times')
-    scoreBlue = TextAsset(data['score2'], fill=blue, style='bold 30pt Times')
     
     buildBoard()
     redrawAll()
-    '''
-    data['scoreTextRed'] = Sprite(scoreRed)
-    data['scoreTextBlue'] = Sprite(scoreBlue,(50,0))
-    '''
+
     App().listenMouseEvent("click", mouseClick)
     App().run()
