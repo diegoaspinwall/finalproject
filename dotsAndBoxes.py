@@ -80,7 +80,7 @@ def drawCenters(): #See drawLeftEdge. The function should color in the center an
 
 def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
     print(data['score1'],data['score2'])
-    Sprite(scoreRed)
+    Sprite(TextAsset(data['score1'], fill=red, style='bold 30pt Times'))
     Sprite(scoreBlue,(50,0))
     
 
