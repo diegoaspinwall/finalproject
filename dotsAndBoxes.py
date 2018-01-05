@@ -25,7 +25,6 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
     drawBottomEdges()
     drawCenters()
     drawScore()
-    
 
 def drawLeftEdges(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
     for col in range(0,4):
@@ -82,7 +81,7 @@ def drawScore(): #Should take no arguments. The function print the current score
     Sprite(TextAsset(data['score1'], fill=red, style='bold 30pt Times'), (50,500))
     Sprite(TextAsset(data['score2'], fill=blue, style='bold 30pt Times'),(400,500))
     if data['score1'] + data['score2'] == 16:
-        Sprite(over, (50,200))
+        Sprite(over, (140,145))
 
 def updateLeftEdge(row,col): #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
     if data['matrix'][col][row][0] == 0:
@@ -205,7 +204,7 @@ if __name__ == '__main__':
     two = TextAsset('2',fill=black,style='bold 40pt Times')
     redSq = RectangleAsset(100,100, LineStyle(0,black),redl)
     blueSq = RectangleAsset(100,100, LineStyle(0,black),bluel)
-    over = TextAsset('Game Over',fill=black,style='bold 40pt Times')
+    over = TextAsset('Game Over',fill=black,style='bold 50pt Times')
     
     buildBoard()
     redrawAll()
