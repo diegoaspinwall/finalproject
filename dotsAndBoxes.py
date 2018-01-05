@@ -84,7 +84,6 @@ def drawScore(): #Should take no arguments. The function print the current score
     for a in data['matrix']:
         for b in data['matrix']:
             
-    
 
 def updateLeftEdge(row,col): #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
     if data['matrix'][col][row][0] == 0:
