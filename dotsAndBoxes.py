@@ -119,10 +119,10 @@ def updateBottomEdge(row,col): #See updateLeftEdge
             data['matrix'][col][row][3]=1
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
                 data['matrix'][col][row][4] = 1
-                data['score1'] += 1
+                '''data['score1'] += 1
                 data['scoreTextRed'].destroy()
                 scoreRed = TextAsset(str(data['score1']),fill=red, style='bold 30pt Times')
-                data['scoreTextRed'] = Sprite(scoreRed)
+                data['scoreTextRed'] = Sprite(scoreRed)'''
         if data['player'] == -1:
             data['matrix'][col][row][3]=2
             if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
@@ -215,7 +215,7 @@ if __name__ == '__main__':
     redrawAll()
     
     data['scoreTextRed'] = Sprite(scoreRed)
-    data['scoreTextBlue'] = Sprite(scoreBlue)
+    data['scoreTextBlue'] = Sprite(scoreBlue,(50,0))
     
     App().listenMouseEvent("click", mouseClick)
     App().run()
