@@ -139,7 +139,7 @@ def updateBottomEdge(row,col):
 def mouseClick(event):
     switch = False
     
-    #checks to see if click is in clickable places, then updates and redraws
+    #checks to see if click is in clickable places, and available, then updates and redraws. Also changes switch to True.
     for col in range(0,4):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
@@ -172,6 +172,7 @@ def mouseClick(event):
                     redrawAll()
                     switch = True
     
+    #this switches the player if an empty spot is clicked (also accepts a left and a right- two trues don't make a false)
     if switch == True:
         data['player']=(-1)*data['player']
 
