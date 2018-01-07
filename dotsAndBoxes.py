@@ -86,7 +86,7 @@ def drawScore():
     if data['score1'] + data['score2'] == 16:
         Sprite(over, (140,145))
 
-def updateLeftEdge(row,col): #Should take two arguments, the row and column number of the square that was just clicked. The function should update the matrix for that column to indicate which player clicked the left edge of that box. The function should also update the right edge of the neighboring box if there is one.
+def updateLeftEdge(row,col):
     if data['matrix'][col][row][0] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][0]=1
@@ -99,7 +99,7 @@ def updateLeftEdge(row,col): #Should take two arguments, the row and column numb
                 data['matrix'][col][row][4] = 2
                 data['score2'] += 1
 
-def updateRightEdge(row,col): #See updateLeftEdge
+def updateRightEdge(row,col):
     if data['matrix'][col][row][1] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][1]=1
@@ -112,7 +112,7 @@ def updateRightEdge(row,col): #See updateLeftEdge
                 data['matrix'][col][row][4] = 2
                 data['score2'] += 1
 
-def updateTopEdge(row,col): #See updateLeftEdge
+def updateTopEdge(row,col):
     if data['matrix'][col][row][2] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][2]=1
@@ -125,7 +125,7 @@ def updateTopEdge(row,col): #See updateLeftEdge
                 data['matrix'][col][row][4] = 2
                 data['score2'] += 1
 
-def updateBottomEdge(row,col): #See updateLeftEdge
+def updateBottomEdge(row,col):
     if data['matrix'][col][row][3] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][3]=1
