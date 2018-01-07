@@ -89,56 +89,52 @@ def drawScore():
 
 def updateLeftEdge(row,col):
     #depending on who clicks on a left edge, it updates that left edge and if that move fills in a square, changes the score and the data['matrix']
-    if data['matrix'][col][row][0] == 0:
-        if data['player'] == 1:
-            data['matrix'][col][row][0]=1
-            if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
-                data['matrix'][col][row][4] = 1
-                data['score1'] += 1
-        if data['player'] == -1:
-            data['matrix'][col][row][0]=2
-            if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
-                data['matrix'][col][row][4] = 2
-                data['score2'] += 1
+    if data['player'] == 1:
+        data['matrix'][col][row][0]=1
+        if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
+            data['matrix'][col][row][4] = 1
+            data['score1'] += 1
+    if data['player'] == -1:
+        data['matrix'][col][row][0]=2
+        if data['matrix'][col][row][2] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
+            data['matrix'][col][row][4] = 2
+            data['score2'] += 1
 
 def updateRightEdge(row,col):
-    if data['matrix'][col][row][1] == 0:
-        if data['player'] == 1:
-            data['matrix'][col][row][1]=1
-            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
-                data['matrix'][col][row][4] = 1
-                data['score1'] += 1
-        if data['player'] == -1:
-            data['matrix'][col][row][1]=2
-            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
-                data['matrix'][col][row][4] = 2
-                data['score2'] += 1
+    if data['player'] == 1:
+        data['matrix'][col][row][1]=1
+        if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
+            data['matrix'][col][row][4] = 1
+            data['score1'] += 1
+    if data['player'] == -1:
+        data['matrix'][col][row][1]=2
+        if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][2] != 0 and data['matrix'][col][row][3] != 0:
+            data['matrix'][col][row][4] = 2
+            data['score2'] += 1
 
 def updateTopEdge(row,col):
-    if data['matrix'][col][row][2] == 0:
-        if data['player'] == 1:
-            data['matrix'][col][row][2]=1
-            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
-                data['matrix'][col][row][4] = 1
-                data['score1'] += 1
-        if data['player'] == -1:
-            data['matrix'][col][row][2]=2
-            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
-                data['matrix'][col][row][4] = 2
-                data['score2'] += 1
+    if data['player'] == 1:
+        data['matrix'][col][row][2]=1
+        if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
+            data['matrix'][col][row][4] = 1
+            data['score1'] += 1
+    if data['player'] == -1:
+        data['matrix'][col][row][2]=2
+        if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][3] != 0:
+            data['matrix'][col][row][4] = 2
+            data['score2'] += 1
 
 def updateBottomEdge(row,col):
-    if data['matrix'][col][row][3] == 0:
-        if data['player'] == 1:
-            data['matrix'][col][row][3]=1
-            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
-                data['matrix'][col][row][4] = 1
-                data['score1'] += 1
-        if data['player'] == -1:
-            data['matrix'][col][row][3]=2
-            if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
-                data['matrix'][col][row][4] = 2
-                data['score2'] += 1
+    if data['player'] == 1:
+        data['matrix'][col][row][3]=1
+        if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
+            data['matrix'][col][row][4] = 1
+            data['score1'] += 1
+    if data['player'] == -1:
+        data['matrix'][col][row][3]=2
+        if data['matrix'][col][row][0] != 0 and data['matrix'][col][row][1] != 0 and data['matrix'][col][row][2] != 0:
+            data['matrix'][col][row][4] = 2
+            data['score2'] += 1
 
 def mouseClick(event):
     switch = False
@@ -147,7 +143,6 @@ def mouseClick(event):
     for col in range(0,4):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
-                #Below added
                 if data['matrix'][col][row][0] == 0:
                     updateLeftEdge(row,col)
                     redrawAll()
