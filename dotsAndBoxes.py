@@ -28,6 +28,7 @@ def redrawAll():
     drawScore()
 
 def drawLeftEdges():
+    #goes thru columns and rows and sprites color or blank depending on what was clicked by whom
     for col in range(0,4):
         for row in range(0,4):
             if data['matrix'][col][row][0]==1:
@@ -37,7 +38,7 @@ def drawLeftEdges():
             else:
                 Sprite(verRectangle, (110*col, 110*row+10))
 
-def drawRightEdges(): #See drawLeftEdge
+def drawRightEdges():
     for col in range(0,4):
         for row in range(0,4):
             if data['matrix'][col][row][1]==1:
@@ -47,7 +48,7 @@ def drawRightEdges(): #See drawLeftEdge
             else:
                 Sprite(verRectangle, (110*(col+1), 110*row+10))
 
-def drawTopEdges(): #See drawLeftEdge
+def drawTopEdges():
     for row in range(0,4):
         for col in range(0,4):
             if data['matrix'][col][row][2]==1:
@@ -57,7 +58,7 @@ def drawTopEdges(): #See drawLeftEdge
             else:
                 Sprite(horRectangle, (110*col+10, 110*row))
 
-def drawBottomEdges(): #See drawLeftEdge
+def drawBottomEdges():
     for row in range(0,4):
         for col in range(0,4):
             if data['matrix'][col][row][3]==1:
