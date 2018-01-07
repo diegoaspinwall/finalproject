@@ -141,22 +141,6 @@ def updateBottomEdge(row,col):
                 data['score2'] += 1
 
 def mouseClick(event):
-    #switches players each time something new is clicked
-    """
-    for row in range(0,5):
-        for col in range(0,5):
-            if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
-                #if data['matrix'][col][row][2] == 0 or data['matrix'][col][3][3] == 0:
-                data['player']=(-1)*data['player']
-            '''
-            -The data['matrix'] isn't the same row and col range because the row and columns don't think around boxes
-            -I included the second part of the 'or' to catch the outer layer of the squares
-            '''
-            if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
-                #if data['matrix'][row][col][0] == 0 or data['matrix'][3][col][1] == 0:
-                data['player']=(-1)*data['player']
-    """
-    
     switch = False
     
     #checks to see if click is in clickable places, then updates and redraws
