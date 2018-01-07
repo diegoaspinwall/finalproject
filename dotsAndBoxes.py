@@ -1,6 +1,6 @@
 #Diego Aspinwall
 #12-14-17
-#dotsAndBoxes.py - tied for second
+#dotsAndBoxes.py - all it needs is a monkey
 
 from ggame import *
 
