@@ -10,16 +10,16 @@ def buildBoard():
     for y in range(0,4):
         for x in range(0,4):
             data['matrix'][y][x] = [0,0,0,0,0]
-    #
+    #makes the four sides and center of each square
 
-def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
+def redrawAll():
     for item in App().spritelist[:]:
         item.destroy()
-    
+    #erases the things that were sprited
     for rw in range(0,5):
         for cl in range(0,5):
             Sprite(dot, (110*cl, 110*rw))
-    
+    #sprites the dots
     drawLeftEdges()
     drawRightEdges()
     drawTopEdges()
@@ -27,7 +27,7 @@ def redrawAll(): #Should take no arguments. Deletes all the graphics on the boar
     drawCenters()
     drawScore()
 
-def drawLeftEdges(): #Should take four (or six) arguments, the row and column numbers of the cell that you are working on and the x and y coordinate of the upper lefthand corner. You can also include the coordinates of the bottom righthand corner if you want. This function should draw the edge of the square in the appropriate color.
+def drawLeftEdges():
     for col in range(0,4):
         for row in range(0,4):
             if data['matrix'][col][row][0]==1:
