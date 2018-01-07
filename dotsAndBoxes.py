@@ -1,6 +1,6 @@
 #Diego Aspinwall
 #12-14-17
-#dotsAndBoxes.py - all it needs is a monkey
+#dotsAndBoxes.py - just needs a monkey
 
 from ggame import *
 
