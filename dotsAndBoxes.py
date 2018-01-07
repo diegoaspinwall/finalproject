@@ -87,6 +87,7 @@ def drawScore():
         Sprite(over, (140,145))
 
 def updateLeftEdge(row,col):
+    #depending on who clicks on a left edge, it updates that left edge and if that move fills in a square, changes the score and the data['matrix']
     if data['matrix'][col][row][0] == 0:
         if data['player'] == 1:
             data['matrix'][col][row][0]=1
@@ -138,7 +139,8 @@ def updateBottomEdge(row,col):
                 data['matrix'][col][row][4] = 2
                 data['score2'] += 1
 
-def mouseClick(event): #Should take one argument, event. The function should figure out where the user clicked (event.x and event.y have the coordinates of the click). The function should figure out which row and column the user clicked and if it is closest to the top edge, bottom edge, left edge, or right edge of the square. The appropriate edge should then be updated.
+def mouseClick(event):
+    #switches players each time something new is clicked
     for row in range(0,5):
         for col in range(0,5):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
@@ -152,6 +154,7 @@ def mouseClick(event): #Should take one argument, event. The function should fig
                 #if data['matrix'][row][col][0] == 0 or data['matrix'][3][col][1] == 0:
                 data['player']=(-1)*data['player']
     
+    #checks to see if click is
     for col in range(0,4):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
