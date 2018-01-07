@@ -6,7 +6,7 @@ from ggame import *
 
 def buildBoard():
     data['matrix'] = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
-    #<>x-axis, y-axis inside second set
+    #<>columns, rows inside second set
     for y in range(0,4):
         for x in range(0,4):
             data['matrix'][y][x] = [0,0,0,0,0]
