@@ -141,6 +141,7 @@ def updateBottomEdge(row,col):
 
 def mouseClick(event):
     #switches players each time something new is clicked
+    """
     for row in range(0,5):
         for col in range(0,5):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
@@ -153,31 +154,37 @@ def mouseClick(event):
             if 110*row<event.x<110*row+10 and 10+110*col<event.y<110*(col+1):
                 #if data['matrix'][row][col][0] == 0 or data['matrix'][3][col][1] == 0:
                 data['player']=(-1)*data['player']
+    """
     
     #checks to see if click is in clickable places, then updates and redraws
     for col in range(0,4):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
-                updateLeftEdge(row,col)
-                redrawAll()
+                #Below added
+                if data['matrix'][col][row][0] == 0:
+                    updateLeftEdge(row,col)
+                    redrawAll()
     
     for col in range(1,5):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
-                updateRightEdge(row,col-1)
-                redrawAll()
+                if data['matrix'][col-1][row][1] == 0:
+                    updateRightEdge(row,col-1)
+                    redrawAll()
     
     for row in range(0,4):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
-                updateTopEdge(row,col)
-                redrawAll()
+                if data['matrix'][col][row][2] == 0:
+                    updateTopEdge(row,col)
+                    redrawAll()
     
     for row in range(1,5):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
-                updateBottomEdge(row-1,col)
-                redrawAll()
+                if data['matrix'][col][row-1][3] == 0:
+                    updateBottomEdge(row-1,col)
+                    redrawAll()
 
 #runs game
 if __name__ == '__main__':
