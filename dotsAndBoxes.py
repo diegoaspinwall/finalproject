@@ -75,7 +75,7 @@ def drawCenters():
             if data['matrix'][col][row][4]==1:
                 Sprite(redSq, (110*col+10, 110*row+10))
                 Sprite(one, (110*col+50, 110*row+25))
-            if data['matrix'][col][row][4]==2:
+            elif data['matrix'][col][row][4]==2:
                 Sprite(blueSq, (110*col+10, 110*row+10))
                 Sprite(two, (110*col+50, 110*row+25))
 
