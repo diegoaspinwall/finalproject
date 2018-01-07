@@ -26,7 +26,7 @@ def redrawAll():
     drawBottomEdges()
     drawCenters()
     drawScore()
-    #data['player']=(-1)*data['player']
+    print('BAM')
 
 def drawLeftEdges():
     #goes thru columns and rows and sprites color or blank depending on what was clicked by whom. Same for next four
@@ -139,13 +139,12 @@ def updateBottomEdge(row,col):
 def mouseClick(event):
     switch = False
     
-    #checks to see if click is in clickable places, and available, then updates and redraws. Also changes switch to True.
+    #checks to see if click is in clickable places, and available, then updates. Also changes switch to True.
     for col in range(0,4):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 if data['matrix'][col][row][0] == 0:
                     updateLeftEdge(row,col)
-                    redrawAll()
                     switch = True
     
     for col in range(1,5):
@@ -153,7 +152,6 @@ def mouseClick(event):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
                 if data['matrix'][col-1][row][1] == 0:
                     updateRightEdge(row,col-1)
-                    redrawAll()
                     switch = True
     
     for row in range(0,4):
@@ -161,7 +159,6 @@ def mouseClick(event):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 if data['matrix'][col][row][2] == 0:
                     updateTopEdge(row,col)
-                    redrawAll()
                     switch = True
     
     for row in range(1,5):
@@ -169,12 +166,12 @@ def mouseClick(event):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1):
                 if data['matrix'][col][row-1][3] == 0:
                     updateBottomEdge(row-1,col)
-                    redrawAll()
                     switch = True
     
-    #this switches the player if an empty spot is clicked (also accepts a left and a right- two trues don't make a false)
+    #this switches the player if an available spot is clicked (also accepts a left and a right- two trues don't make a false). It also redraws all
     if switch == True:
         data['player']=(-1)*data['player']
+        redrawAll()
 
 #runs game
 if __name__ == '__main__':
