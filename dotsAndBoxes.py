@@ -157,6 +157,8 @@ def mouseClick(event):
                 data['player']=(-1)*data['player']
     """
     
+    switch = False
+    
     #checks to see if click is in clickable places, then updates and redraws
     for col in range(0,4):
         for row in range(0,4):
@@ -165,6 +167,7 @@ def mouseClick(event):
                 if data['matrix'][col][row][0] == 0:
                     updateLeftEdge(row,col)
                     redrawAll()
+                    switch = True
     
     for col in range(1,5):
         for row in range(0,4):
@@ -172,6 +175,7 @@ def mouseClick(event):
                 if data['matrix'][col-1][row][1] == 0:
                     updateRightEdge(row,col-1)
                     redrawAll()
+                    switch = True
     
     for row in range(0,4):
         for col in range(0,4):
@@ -179,6 +183,7 @@ def mouseClick(event):
                 if data['matrix'][col][row][2] == 0:
                     updateTopEdge(row,col)
                     redrawAll()
+                    switch = True
     
     for row in range(1,5):
         for col in range(0,4):
@@ -186,6 +191,10 @@ def mouseClick(event):
                 if data['matrix'][col][row-1][3] == 0:
                     updateBottomEdge(row-1,col)
                     redrawAll()
+                    switch = True
+    
+    if switch == True:
+        data['player']=(-1)*data['player']
 
 #runs game
 if __name__ == '__main__':
