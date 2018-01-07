@@ -180,7 +180,7 @@ if __name__ == '__main__':
     
     data = {}
     data['matrix'] = 0
-    data['player'] = -1
+    data['player'] = 1
     #1 is red or player 1, -1 is blue or player 2
     data['score1'] = 0
     data['score2'] = 0
