@@ -142,28 +142,24 @@ def mouseClick(event):
     for col in range(0,4):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1) and data['matrix'][col][row][0] == 0:
-                #if data['matrix'][col][row][0] == 0:
                 updateLeftEdge(row,col)
                 switch = True
     
     for col in range(1,5):
         for row in range(0,4):
             if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1) and data['matrix'][col-1][row][1] == 0:
-                #if data['matrix'][col-1][row][1] == 0:
                 updateRightEdge(row,col-1)
                 switch = True
     
     for row in range(0,4):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1) and data['matrix'][col][row][2] == 0:
-                #if data['matrix'][col][row][2] == 0:
                 updateTopEdge(row,col)
                 switch = True
     
     for row in range(1,5):
         for col in range(0,4):
             if 110*row<event.y<110*row+10 and 10+110*col<event.x<110*(col+1) and data['matrix'][col][row-1][3] == 0:
-                #if data['matrix'][col][row-1][3] == 0:
                 updateBottomEdge(row-1,col)
                 switch = True
     
