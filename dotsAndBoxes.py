@@ -28,7 +28,7 @@ def redrawAll():
     drawScore()
 
 def drawLeftEdges():
-    #goes thru columns and rows and sprites color or blank depending on what was clicked by whom
+    #goes thru columns and rows and sprites color or blank depending on what was clicked by whom. Same for next four
     for col in range(0,4):
         for row in range(0,4):
             if data['matrix'][col][row][0]==1:
@@ -69,7 +69,7 @@ def drawBottomEdges():
                 Sprite(horRectangle, (110*col+10, 110*(row+1)))
 
 
-def drawCenters(): #See drawLeftEdge. The function should color in the center and label it with a 1 or 2 based on who captured it.
+def drawCenters():
     for row in range(0,4):
         for col in range(0,4):
             if data['matrix'][col][row][4]==1:
@@ -79,7 +79,8 @@ def drawCenters(): #See drawLeftEdge. The function should color in the center an
                 Sprite(blueSq, (110*col+10, 110*row+10))
                 Sprite(two, (110*col+50, 110*row+25))
 
-def drawScore(): #Should take no arguments. The function print the current score as well as detect if the game is over.
+def drawScore():
+    #sprites the scores and displays "Game over" when needed
     Sprite(TextAsset(data['score1'], fill=red, style='bold 30pt Times'), (50,500))
     Sprite(TextAsset(data['score2'], fill=blue, style='bold 30pt Times'),(400,500))
     if data['score1'] + data['score2'] == 16:
