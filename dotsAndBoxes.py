@@ -4,12 +4,13 @@
 
 from ggame import *
 
-def buildBoard(): #Should take no arguments. Creates an 4x4 matrix (or whatever size you want) to represent the game board. Each entry in the matrix should be a list of 5 zeros representing the top, bottom, left, right, and center of the square. 
+def buildBoard():
     data['matrix'] = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
-    #<>x, up and down inside second set
+    #<>x-axis, y-axis inside second set
     for y in range(0,4):
         for x in range(0,4):
             data['matrix'][y][x] = [0,0,0,0,0]
+    #
 
 def redrawAll(): #Should take no arguments. Deletes all the graphics on the board (see useful detail #2 below) and draws the current configuration of the board.
     for item in App().spritelist[:]:
