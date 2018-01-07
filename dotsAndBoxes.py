@@ -26,6 +26,7 @@ def redrawAll():
     drawBottomEdges()
     drawCenters()
     drawScore()
+    #data['player']=(-1)*data['player']
 
 def drawLeftEdges():
     #goes thru columns and rows and sprites color or blank depending on what was clicked by whom. Same for next four
