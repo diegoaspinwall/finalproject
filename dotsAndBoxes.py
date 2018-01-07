@@ -141,10 +141,10 @@ def mouseClick(event):
     #checks to see if click is in clickable places, and available, then updates. Also changes switch to True.
     for col in range(0,4):
         for row in range(0,4):
-            if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1):
-                if data['matrix'][col][row][0] == 0:
-                    updateLeftEdge(row,col)
-                    switch = True
+            if 110*col<event.x<110*col+10 and 10+110*row<event.y<110*(row+1) and data['matrix'][col][row][0] == 0:
+                #if data['matrix'][col][row][0] == 0:
+                updateLeftEdge(row,col)
+                switch = True
     
     for col in range(1,5):
         for row in range(0,4):
